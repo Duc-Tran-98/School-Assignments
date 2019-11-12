@@ -1,0 +1,9 @@
+
+public class RemoveMin {
+
+	public ListNode remove(ListNode list) {
+		
+		return null;
+	}
+
+}

@@ -1,0 +1,35 @@
+
+public class CirclesCountry {
+	
+	public int leastBorders(int[] x, int[] y, int[] r, int x1, int y1, int x2, int y2) 
+	{
+		//boolean[] a1 = new boolean[x.length];
+		//boolean[] b1 = new boolean[x.length];
+		int counter = 0;
+		boolean inCircleOne = true;
+		boolean inCircleTwo = true;
+		for(int k = 0; k < x.length; k++)
+		{
+			double lengthA = Math.sqrt(Math.pow(x1 - x[k], 2) + Math.pow(y1 - y[k], 2));
+			double lengthB = Math.sqrt(Math.pow(x2 - x[k], 2) + Math.pow(y2 - y[k], 2));
+			inCircleOne = (lengthA < r[k]);
+			inCircleTwo = (lengthB < r[k]);
+			if(inCircleOne != inCircleTwo)
+			{
+				counter++;
+			}
+			//a1[k] = (lengthA < r[k]);
+			//b1[k] = (lengthB < r[k]);
+		}
+		
+		/*for(int i = 0; i < x.length; i++)
+		{
+			if(a1[i] != b1[i])
+			{
+				counter++;
+			}
+		}*/
+		return counter;
+	}
+
+}

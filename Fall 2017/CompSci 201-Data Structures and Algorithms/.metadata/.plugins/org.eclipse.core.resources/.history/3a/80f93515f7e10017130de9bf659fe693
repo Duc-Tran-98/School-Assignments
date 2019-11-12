@@ -1,0 +1,13 @@
+
+public class RaspberryToast {
+
+	public int apply(int upper_limit, int layer_count) {
+		if(upper_limit >= layer_count) {
+			return 1;
+		}
+		int swipes = 0;
+		
+		return swipes;
+	}
+	
+}

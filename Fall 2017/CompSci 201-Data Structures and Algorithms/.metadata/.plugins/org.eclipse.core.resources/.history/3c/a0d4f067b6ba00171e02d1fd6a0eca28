@@ -1,0 +1,29 @@
+
+public class ListStretch {
+
+	public ListNode stretch(ListNode list, int amount) {
+		if(list == null) {
+			return null;
+		}
+		ListNode first = list;
+		for(int i = 1; i < amount; i++) {
+			list.next = new ListNode(list.info, list.next);
+		}
+		//System.out.println(list.info + " Current Info");
+		list.next = stretch(list.next.next.next, amount);
+		return first;
+	}
+	
+	public static void main(String[] args) {
+		ListStretch l = new ListStretch();
+		ListNode a = new ListNode(3, null);
+		ListNode b = new ListNode(2, a);
+		ListNode c = new ListNode(1, b);
+		ListNode list = l.stretch(c, 4);
+		while(list != null){
+			System.out.println(list.info);
+			list = list.next;
+		}
+	}
+	
+}

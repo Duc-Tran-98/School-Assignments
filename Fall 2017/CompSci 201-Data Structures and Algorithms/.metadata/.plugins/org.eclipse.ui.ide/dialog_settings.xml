@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ExternalProjectImportWizard">
+		<item value="false" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\DNTDN\Documents\School\CompSci\201\huff-f17-start"/>
+			<item value="C:\Users\DNTDN\Documents\School\CompSci\201\autocompletef17-start"/>
+			<item value="C:\Users\DNTDN\Documents\School\CompSci\201\dna-start"/>
+			<item value="C:\Users\DNTDN\Documents\School\CompSci\201\percolation-start"/>
+			<item value="C:\CompSci\201\classwork"/>
+			<item value="C:\CompSci\201\markov-fall17"/>
+			<item value="C:\CompSci\201\nbody-start-17"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+	<section name="NewWizardAction">
+	</section>
+</section>

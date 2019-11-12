@@ -1,0 +1,24 @@
+
+public class SandwichBar {
+
+	public int whichOrder(String[] available, String[] orders) 
+	{
+		for(int i = 0; i < orders.length; i++) {
+			boolean good = true;
+			String[] currentOrderIngredients = orders[i].split(" ");
+			for(int k = 0; k < currentOrderIngredients.length; k++) {
+				for(int j = 0; j < available.length; j++) {
+					good = currentOrderIngredients[k].equals(available[j]);
+					if(good) {
+						j = Integer.MAX_VALUE;
+					}
+				}
+			}
+			if(good) {
+				return i;
+			}
+		}
+		return -1;
+	}
+
+}

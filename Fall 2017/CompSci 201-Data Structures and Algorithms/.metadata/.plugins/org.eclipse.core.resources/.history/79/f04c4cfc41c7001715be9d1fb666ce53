@@ -1,0 +1,34 @@
+import java.util.*;
+
+public class NLLH {
+
+	private String[] characters = {"A", "B", "C", "D"};
+	private int length = characters.length;
+	
+	public String createDNA(int size) {
+		StringBuilder dna = new StringBuilder();
+		for(int k = 0; k < size; k++) {
+			String append = characters[(int)(length * Math.random())];
+			dna.append(append);
+		}
+		return dna.toString();
+	}
+	
+	public static void main(String[] arg) {
+		NLLH nllh = new NLLH();
+		String dna = nllh.createDNA(5000000);
+		String splicee = nllh.createDNA((int)(Math.random() * 49 + 1));
+		String enzyme = dna.substring(500, 506);
+		System.out.println(splicee + " : " + enzyme);
+		IDnaStrand ls = new LinkStrand(dna);
+		//IDnaStrand ls = new StringStrand(dna);
+		//IDnaStrand ls = new StringBuilderStrand(dna);
+		double start = System.nanoTime();
+		IDnaStrand k = ls.cutAndSplice(enzyme, splicee);
+		double end = System.nanoTime();
+		System.out.println("Time: " + (end-start)/1e9);
+		System.out.println("O: " + dna.length());
+		System.out.println("N: " + k.size() + " A: " + k.getAppendCount());
+	}
+	
+}

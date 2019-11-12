@@ -1,0 +1,35 @@
+import java.util.*;
+public class RemoveMin {
+
+	public ListNode remove(ListNode list) {
+		if(list == null || list.next == null) {
+			return null;
+		}
+		int min = 1000;
+		int minPos = 0;
+		int count = 0;
+		List<Integer> temp = new ArrayList<>();
+		while(list != null) {
+			if(list.info < min) {
+				min = list.info;
+				minPos = count;
+			}
+			list = list.next;
+			count++;
+		}
+		return ;
+	}
+	
+	public static void main(String[] args) {
+		RemoveMin l = new RemoveMin();
+		ListNode a = new ListNode(3, null);
+		ListNode b = new ListNode(2, a);
+		ListNode c = new ListNode(1, b);
+		ListNode list = l.remove(c);
+		while(list != null){
+			System.out.println(list.info);
+			list = list.next;
+		}
+	}
+
+}

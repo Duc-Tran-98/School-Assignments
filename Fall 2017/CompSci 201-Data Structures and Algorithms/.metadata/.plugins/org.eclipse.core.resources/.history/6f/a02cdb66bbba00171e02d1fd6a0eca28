@@ -1,0 +1,28 @@
+
+public class RemoveMin {
+
+	public ListNode remove(ListNode list) {
+		if(list == null || list.next == null) {
+			return null;
+		}
+		ListNode first = list;
+		ListNode re = list;
+		int min = 1000;
+		int minPos = 0;
+		int count = 0;
+		while(list != null) {
+			if(list.info < min) {
+				min = list.info;
+				minPos = count;
+			}
+			list = list.next;
+			count++;
+		}
+		for(int i = 0; i < minPos; i++) {
+			first = first.next;
+		}
+		first = first.next.next;
+		return re;
+	}
+
+}

@@ -1,0 +1,4 @@
+LakshyaBakshi
+500.0 2000.0
+10.0
+DONE
